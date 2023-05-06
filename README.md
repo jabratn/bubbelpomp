@@ -5,10 +5,12 @@ The bubble pump is a variant on the air-lift principle. When air is blown in a p
 
 Our bubble pump is a poor man's version of the geyser pump. It is designed to be used with relatively small and cheap electrical air pumps that can be operated by simple and cheap solar panels. Typically the maximum air pressure difference these pumps can produce is 0.3\[bar\]. And therefore we cannot place our bubble pump much deeper than approximately 2 meters below the water surface. However, by design we make it easy to tune the size of the air bubble chamber such that you can optimize the pump for the depth of the water source (well or otherwise). The geyser effect will be negligible and the output not too high, but the main idea of this pump is that it may provide a small but steady stream of water. The supply can be either applied directly (e.g. irrigation, feeding life stock, etc) or stored for later use (e.g. a pond or storage tank).
 
+The working of the bubble pump is based on the oscillating function of the siphon. By pumping air into the pump, water is pushed down until the level reaches the bottom of the siphon. Then a large bubble of air will be released, being pushed out by the rising water, until the level is equal to the top of the siphon. The air chamber above the siphon helps dampening the overshoot and smooth the transition into the next pump cycle.
+
 ## Materials
 For the pump housing we use a PVC tube with a diameter of approx. 32\[mm\]. This should be small enough to fit in a fairly narrow borehole. *Note: these are outer diameters.* Length of this tube shall be at least 40\[cm\]. Wall thickness shall be less than 3\[mm\], otherwise the pump dimensions will not fit.
 
-Both the pump and siphon shall be 3D-printed in PETG. Measure the inner diameter of the PVC tube, and use it as basis in the parameterised model of the pump in **pump-par.FCStd**.
+Both the pump and siphon are best 3D-printed in PETG because it is easier to produce an air tight pump plug. Measure the inner diameter of the PVC tube, and use it as basis in the parameterised model of the pump in **pump-par.FCStd**.
 
 Pump and siphon are connected using PE tubing with outer diameter of 8\[mm\] and preferably a wall thickness of approx. 1\[mm\]. Measure the diameter and use it in the parameterised models of both the pump **pump-par.FCStd** and siphon **siphon-par.FCStd**. 
 
@@ -16,10 +18,12 @@ Pump and siphon are connected using PE tubing with outer diameter of 8\[mm\] and
 Export the FreeCAD model in STL or AFM format and use your favourate rendering engine to create GCODE for your printer. Do not print supports, but when using a recent version of Cura it is a good idea to use the ``Make Overhang Printable`` option. This should result in a much nicer 'roof' of the cavity inside both the pump and the siphon.
 
 ## Construction
-As mentioned above, the outer shell of the pump shall be made from a PVC tube of approx. 40\[cm\] long and minimal 32\[mm\] wide. Internally, for the siphon we will need a few pieces of 8\[mm\] PE tubing. Cut pieces of approx. 10, 20 and 30\[cm\]. The shorter ones for the siphon and the longest for the lifting tube. (See the accompanying photos.)
+As mentioned above, the outer shell of the pump shall be made from a PVC tube of approx. 40\[cm\] long and minimal 32\[mm\] wide. Internally, for the siphon we will need a few pieces of 8\[mm\] PE tubing. Cut pieces of approx. 10, 20 and 30\[cm\]. The shorter ones for the siphon and the longest for the lifting tube. (See the accompanying photos.) The 10\[cm\] tube for the siphon height, the 20\[cm\] tube for the siphon plus air chamber height, and the 30\[cm\] tube for the water lifting part of the pump.
 
 ## Tips and tricks
 Use a 12V rated air pump in combination with a 6V PV-panel. The pump will not run the fastest, but increase its life time (i.e. the rubber seals inside the pump will last a lot longer).
+Print slightly warmer (approx. 5\[degC\]) then usually to help create an air tight PETG model.
+Use 6\[mm\] silicon tubing to create the connection between the pump and the 8\[mm\] PE tube; a 1\[cm\] length piece of tube should be enough to fit on the pump and in the PE tube.
 
 ## Installation
 The ideal depth for the pump is somewhere between 1 and 2\[m\] below the water surface. This type of small airpumps have a maximum rating of 0.3\[bar\], so placing the pump deeper is no use. And closer to the surface makes it more difficult for the oscillating process of the siphon to start up.
